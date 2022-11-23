@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="El objetivo principal de un dashboard es ofrecer visibilidad sobre los indicadores que deben alcanzar determinado valor para alcanzar los objetivos de la empresa. Además permite conocer datos de valor, analizar tendencias y fijar líneas de actuación.">
+    <meta name="author" content="Juan José Henao Gutiérrez">
+    <title>GLPI - Panel de control</title>
+    <!-- favicon -->
+       <!-- Custom fonts for this template-->
+       <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+       <link
+           href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+           rel="stylesheet">
+   
+       <!-- Custom styles for this template-->
+       <link href="../css/sb-admin-2.min.css" rel="stylesheet">
+
+<body id="page-top">
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-dark sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <!-- <i class="fas fa-laugh-wink"></i> -->
+                </div>
+                <div class="sidebar-brand-text mx-3"><div class="sidebar-brand-text mx-3"><img src="../logo.jpg" width="200" height="60" ></div></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Dashboard
+            </div>
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="../index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Panel de control</span>
+                </a>
+            </li>
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Inicio
+            </div>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Administración
+            </div>
+
+            <!-- Nav Item - Inventario Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <i class="fas fa-warehouse"></i>
+                    <span>Activos</span>
+                </a>
+                <div id="collapseOne" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Utilidades:</h6>
+                        <a class="collapse-item" href="../Layouts/computadoras.html">Computadoras</a>
+                        <a class="collapse-item" href="#">Monitores</a>
+                        <a class="collapse-item" href="#">Software</a>
+                        <a class="collapse-item" href="#">Equipo de red</a>
+                        <a class="collapse-item" href="#">Dispositivos</a>
+                        <a class="collapse-item" href="#">Impresoras</a>
+                        <a class="collapse-item" href="#">Cartuchos</a>
+                        <a class="collapse-item" href="#">Consumibles</a>
+                        <a class="collapse-item" href="#">Teléfonos</a>
+                        <a class="collapse-item" href="#">Global</a>
+                </div>
+            </li>
+
+            <!-- Nav Item - Soporte Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-question"></i>
+                    <span>Soporte</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Opciones:</h6>
+                        <a class="collapse-item" href="../Redesign-GLPI/Layouts/Incidencias.html">Incidencias</a>
+                        <a class="collapse-item" href="../Redesign-GLPI/Layouts/Problemas.html">Problemas</a>
+                        <a class="collapse-item" href="../Redesign-GLPI/Layouts/Cambios.html">Cambios</a>
+                        <a class="collapse-item" href="../Redesign-GLPI/Layouts/Planificacion.html">Planificación</a>
+                        <a class="collapse-item" href="../Redesign-GLPI/Layouts/Estadisticas.html">Estadísticas</a>
+                        <a class="collapse-item" href="../Redesign-GLPI/Layouts/InceRecurrentes.html">Incidencias recurrentes</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                    <i class="fas fa-users-cog"></i>
+                    <span>Administración</span>
+                </a>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingthree" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Opciones:</h6>
+                        <a class="collapse-item" href="#">Usuarios</a>
+                        <a class="collapse-item" href="#">Grupos</a>
+                        <a class="collapse-item" href="#">Entidades</a>
+                        <a class="collapse-item" href="#">Reglas</a>
+                        <a class="collapse-item" href="#">Diccionarios</a>
+                        <a class="collapse-item" href="#">Perfiles</a>
+                        <a class="collapse-item" href="#">Mail queue</a>
+                        <a class="collapse-item" href="#">Mantenimiento</a>
+                        <a class="collapse-item" href="#">Logs</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Panel administrativo
+            </div>
+
+            <!-- Nav Item - Útiles Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Útiles</span>
+                </a>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Opciones:</h6>
+                        <a class="collapse-item" href="#">Busqueda avanzada</a>
+                    </div>
+                </div>
+            </li>
+            
+            <!-- Nav Item - Configuración Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Configuración</span>
+                </a>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Ajustes:</h6>
+                        <a class="collapse-item" href="#">Menús desplegables</a>
+                        <a class="collapse-item" href="#">Componentes</a>
+                        <a class="collapse-item" href="#">Notificaciones</a>
+                        <a class="collapse-item" href="#">ANS (Nivel de servicio)</a>
+                        <a class="collapse-item" href="#">General</a>
+                        <a class="collapse-item" href="#">Selecciones</a>
+                        <a class="collapse-item" href="#">Acciones automáticas</a>
+                        <a class="collapse-item" href="#">Autenticación</a>
+                        <a class="collapse-item" href="#">Receptores</a>
+                        <a class="collapse-item" href="#">Enlaces Externos</a>
+                        <a class="collapse-item" href="#">Plugins</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="¿Deseas buscar algo?" aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small" placeholder="¿Deseas buscar algo?" aria-label="Search" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">99+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Notificaciones
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Noviembre 11, 2021</div>
+                                        <span class="font-weight-bold">Hola, ¿Puedes ayudarme en algo?</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Noviembre 9, 2021</div>
+                                        Registro de ventas de puntos de fábrica.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">Noviembre 5, 2021</div>
+                                        Alerta de gasto: hemos notado un gasto inusualmente alto en punto de fabrica.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Ver todas</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">99+</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Mensajes pendientes
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg" alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">¡Hola! Me pregunto si puedes ayudarme con un problema que he tenido.</div>
+                                        <div class="small text-gray-500">Carolina · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg" alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Tengo las fotos que ordenaste el mes pasado, ¿cómo ¿te gustaría que te los enviaran?</div>
+                                        <div class="small text-gray-500">Juliana · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg" alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">El informe del mes pasado se ve muy bien, estoy muy contento con el progreso hasta ahora, ¡sigan con el buen trabajo!</div>
+                                        <div class="small text-gray-500">Juan · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">¿Soy un buen chico? La razón por la que pregunto es porque alguien me dijo que la gente le dice esto a todos los perros, incluso si no son buenos ...</div>
+                                        <div class="small text-gray-500">Willington Gutiérrez · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Leer más mensajes</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nombre de usuario</span>
+                                <img class="img-profile rounded-circle" src="../img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Perfil
+                                </a>
+                                <a class="dropdown-item" href="../Redesign-GLPI/Layouts/Settings.html">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Ajustes
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Registro de actividades
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Cerrar sesión
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End of Topbar -->
+
+<!-- formulario de ingreso-->
+<div class="card">
+    <div class="card-header">
+        <ul class="nav nav-tabs card-header-tabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" id="item-1-1-tab" role="tab" aria-controls="item-1-1" aria-selected="true" href="#item-1-1" data-bs-toggle="tab">Ingresar</a></li>
+            <li class="nav-item"><a class="nav-link" id="item-1-2-tab" role="tab" aria-controls="item-1-2" aria-selected="false" href="#item-1-2" data-bs-toggle="tab">Gestión</a></li>
+            <li class="nav-item"></li>
+        </ul>
+
+    </div>
+    <div class="card-body">
+        <div id="nav-tabContent" class="tab-content">
+
+            <!-- tab Ingresar-->
+            <div id="item-1-1" class="tab-pane fade show active" role="tabpanel" aria-labelledby="item-1-1-tab">
+                
+                <section>
+                    <h1 class="text-center text-capitalize"></h1>
+                    <div class="container">
+                        <form id="application-form">
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Tipo</strong></p><input class="form-control form-select " type="text" required="" name="" placeholder="Hardware, Software, Red, Laptop....">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Nombre dispositivo</strong></p><input class="form-control" type="text" required="" name="" placeholder="RAM, CPU, SSD">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Fecha de ingreso</strong><span class="text-danger"></span></p><input class="form-control" type="date" required="" name="" readonly>
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Responsable</strong></p><input class="form-control" type="email" name="" placeholder="Nombre de usuario" readonly>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Marca</strong></p><input class="form-control" type="text" name="" placeholder="genius, hp, dell">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Modelo</strong></p><input class="form-control" type="text" required="" name="" placeholder="nombre modelo dispositivo">
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Estado</strong></p><input class="form-control" type="text" required="" name="" placeholder="nuevo, dañado, bodega">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Serial</strong></p><input class="form-control" type="text" required="" name="" placeholder="123567889">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Código&nbsp;inventario</strong></p><input class="form-control" type="text" required="" name="" placeholder="Nombre321">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Centro de costo</strong></p><input class="form-control" type="text" required="" name="" placeholder="CM001">
+
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Descripción</strong></p><textarea class="form-control" type="text" required="" placeholder="1234567890'¿" name="Qualification"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3"><p><strong>Imagen del dispositivo </strong><span class="text-danger"></span></p>
+<div class="file">
+        <!-- Upload image input-->
+        <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm ">
+            <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+            <label id="upload-label" for="upload" class="font-weight-light text-muted">Seleccionar imagen</label>
+            <div class="input-group-append">
+                <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Selecciona una imagen</small></label>
+            </div>
+        </div>
+
+        <!-- Uploaded image area-->
+        <p class="font-italic text-dark text-center"></p>
+        <div class="image-area mt-4 text-dark"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"  width=200></div>
+<div class="col d-none">
+<p><strong>URL</strong><span class="text-danger">*</span></p>
+<input id="urllink" name="url" type="url" class="form-control" readonly/>
+</div>
+</div></div>
+                            <div class="justify-content-center d-flex form-group mb-3">
+                                <div id="submit-btn">
+                                    <div class="row"><button class="btn btn-success  m-0 rounded-pill px-4" type="button" style="min-width: 500px;" action method="POST" target="hidden_iframe">Guardar</button></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <h3 id="fail" class="text-center text-danger d-none"><br>Form not Submitted&nbsp;<a href="contact.html">Try Again</a><br><br></h3>
+                        <h3 id="success-1" class="text-center text-success d-none"><br>Form Submitted Successfully&nbsp;<a href="contact.html">Send Another Response</a><br><br></h3>
+                    </div>
+                </section>
+            </div>
+
+            <!-- tab Gestión-->
+            <div id="item-1-2" class="tab-pane fade" role="tabpanel" aria-labelledby="item-1-2-tab">
+                <section>
+                    <h1 class="text-center text-capitalize"></h1>
+                    <div class="container">
+                        <form id="application-form">
+                            <div>
+                                <div style="background-color: #777780">
+                                    <h6 style="color: #ffffff">Ciclo de vida del activo</h6>
+                                </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Fecha de la orden</strong><span class="text-danger"></span></p><input class="form-control" type="date" required="" name="">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Fecha de la compra</strong><span class="text-danger"></span></p><input class="form-control" type="date" required="" name="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Fecha de la entrega</strong><span class="text-danger"></span></p><input class="form-control" type="date" required="" name="">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Fecha de inicio</strong><span class="text-danger"></span></p><input class="form-control" type="date" required="" name="">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Fecha del último inventario físico</strong><span class="text-danger"></span></p><input class="form-control" type="date" required="" name="">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Fecha de puesta en marcha</strong><span class="text-danger"></span></p><input class="form-control" type="date" required="" name="">
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+                        <hr />
+
+                        <div>
+                            <div style="background-color: #777780">
+                                <h6 style="color: #ffffff">Información administrativa y financiera</h6>
+                            </div>
+                        <div class="form-group mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <p><strong>Proveedor</strong></p><select class="form-control" ><option selected disabled value="">Seleccionar...</option>
+                                        <option>Radeca</option>
+                                        <option>NoviCompu</option>
+                                        <option>Risc</option>
+                                        </select>
+                                </div>
+                                <div class="col">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <p><strong>Número de pedido</strong></p><input class="form-control" type="text" required="" name="" placeholder="000123">
+                                </div>
+                                <div class="col">
+                                    <p><strong>Número de activo</strong></p><input class="form-control" type="text" required="" name="" placeholder="CM0014554">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <p><strong>Número de factura</strong></p><input class="form-control" type="text" required="" name="" placeholder="0546931">
+                                </div>
+                                <div class="col">
+                                    <p><strong>Forma de entrega</strong></p><input class="form-control" type="text" required="" name="">
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Monto</strong></p><input class="form-control" type="number" placeholder="0.0" step="0.01" min="0" max="9999999">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Precio extensión garantía</strong></p><input class="form-control" type="number" placeholder="0.0" step="0.01" min="0" max="9999999">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Valor neto contable (VNC)</strong></p><input class="form-control" type="text" required="" name="" placeholder="--" readonly>
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>  
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Tipo de amortización</strong></p><select class="form-control" ><option selected disabled value="">Seleccionar...</option>
+                                            <option>--</option>
+                                            <option>--</option>
+                                            <option>--</option>
+                                            </select>
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>Duración de amortización</strong></p><select class="form-control" ><option selected disabled value="">Seleccionar...</option>
+                                            <option>1 año</option>
+                                            <option>2 años</option>
+                                            <option>3 años</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Coeficiente de amortización</strong></p><input class="form-control" type="number" placeholder="0.0" step="0.01" min="0" max="9999999">
+                                    </div>
+                                    <div class="col">
+                                        <p><strong>CTP (precio de compra + costo de reporte)</strong></p><input class="form-control" type="text" required="" name="" placeholder="--" readonly>
+                                    </div>
+                                      
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Comentario</strong></p><textarea class="form-control" type="text" required="" placeholder="" name="Qualification"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group mb-3">
+                                <div class="row">
+                                    <div class="col">
+                                        <p><strong>Criticidad al negocio</strong></p><select class="form-control" ><option selected disabled value="">Seleccionar...</option>
+                                            <option>--</option>
+                                            <option>--</option>
+                                            <option>--</option>
+                                            </select>
+                                    </div>
+                                    <div class="col">
+                                    </div>
+                                </div>
+                            </div>
+                            <hr />
+
+                        <div>
+                            <div style="background-color: #777780">
+                                <h6 style="color: #ffffff">Datos de garantía</h6>
+                            </div>
+                        <div class="form-group mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <p><strong>Fecha de inicio de garantía</strong><span class="text-danger"></span></p><input class="form-control" type="date" required="" name="">
+                                </div>
+                                <div class="col">
+                                    <p><strong>Duración de garantía</strong></p><select class="form-control" ><option selected disabled value="">Seleccionar...</option>
+                                        <option>0 meses</option>
+                                        <option>1 mes</option>
+                                        <option>2 meses</option>
+                                        </select>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <div class="row">
+                                <div class="col">
+                                    <p><strong>Datos de garantía</strong></p><input class="form-control" type="text" required="" name="" placeholder="">
+                                </div>
+                                <div class="col">
+                                    <p><strong>Alertas sobre datos financieros</strong></p><select class="form-control" ><option selected disabled value="">Seleccionar...</option>
+                                        <option>--</option>
+                                        <option>--</option>
+                                        <option>--</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                            <div class="form-group mb-3"><p><strong>Factura</strong><span class="text-danger"></span></p>
+<div class="file">
+        <!-- Upload image input-->
+        <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm ">
+            <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
+            <label id="upload-label" for="upload" class="font-weight-light text-muted">Seleccionar archivo</label>
+            <div class="input-group-append">
+                <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Selecciona un archivo</small></label>
+            </div>
+        </div>
+
+        <!-- Uploaded image area-->
+        <p class="font-italic text-dark text-center"></p>
+        <div class="image-area mt-4 text-dark"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"  width=200></div>
+<div class="col d-none">
+<p><strong>URL</strong><span class="text-danger">*</span></p>
+<input id="urllink" name="url" type="url" class="form-control" readonly/>
+</div>
+</div></div>
+                            <div class="justify-content-center d-flex form-group mb-3">
+                                <div id="submit-btn">
+                                    <div class="row"><button class="btn btn-success  m-0 rounded-pill px-4" type="button" style="min-width: 500px;" action method="POST" target="hidden_iframe">Guardar</button></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <h3 id="fail" class="text-center text-danger d-none"><br>Form not Submitted&nbsp;<a href="contact.html">Try Again</a><br><br></h3>
+                        <h3 id="success-1" class="text-center text-success d-none"><br>Form Submitted Successfully&nbsp;<a href="contact.html">Send Another Response</a><br><br></h3>
+                    </div>
+                </section>
+            </div>
+            <div id="item-1-3" class="tab-pane fade" role="tabpanel" aria-labelledby="item-1-3-tab">
+             
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+ <!-- Bootstrap core JavaScript-->
+ <script src="../vendor/jquery/jquery.min.js"></script>
+ <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <!-- Bootstrap Vental modal JavaScript -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+ <!-- Core plugin JavaScript-->
+ <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+ <!-- Custom scripts for all pages-->
+ <script src="../js/sb-admin-2.min.js"></script>
+
+
+
+</body>
+
+</html>
